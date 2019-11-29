@@ -1,0 +1,85 @@
+@import "config";
+
+.content {
+  max-width: $max-width;
+
+  &__row {
+    display: flex;
+    margin: $gutter (-$gutter / 2);
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  &__col {
+    width: 100%;
+    padding: 0 $gutter/2;
+    margin: $gutter 0;
+
+    @media (min-width: 700px) {
+      width: calc(5 * 100% / 6);
+      margin-left: calc(100% / 12);
+    }
+
+    @media (min-width: 1000px) {
+      width: calc(2 * 100% / 3);
+      margin-left: calc(100% / 6);
+    }
+  }
+}
+
+.videoWrapper {
+  position: relative;
+  height: 0;
+  padding-top: 25px;
+  padding-bottom: 56.25%;
+
+  .video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.text {
+  margin-bottom: -$gutter;
+
+  &__p {
+    margin-bottom: $gutter;
+    line-height: 2;
+  }
+}
+
+.quote {
+  padding: $gutter;
+  margin: 0 (-$gutter);
+  background-color: $ljosGrar;
+
+  &__data {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__attribute {
+    padding-top: $gutter/2;
+  }
+}
+
+.haus {
+  margin-bottom: -$gutter;
+  font-family: $font-title;
+}
+
+.tags {
+  margin-bottom: -$gutter;
+
+  &__tag {
+    margin-bottom: $gutter;
+  }
+}
+
+.code {
+  font-family: monospace;
+  white-space: pre-wrap;
+}

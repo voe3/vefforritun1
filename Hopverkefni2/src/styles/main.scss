@@ -1,0 +1,9 @@
+.main {
+  max-width: $max-width;
+  padding: 0 $gutter;
+  margin: 0 auto;
+
+  @media (min-width: 1240px) {
+    padding: 0;
+  }
+}

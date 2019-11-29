@@ -1,0 +1,40 @@
+@import "config";
+
+.buttons {
+  display: flex;
+  padding: 2*$gutter 0;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.button--fyrirlestrar {
+  width: fit-content;
+  padding: $gutter/2;
+  margin: 0 $gutter;
+  font-family: $font-title;
+  font-size: 24px;
+  font-weight: 700;
+  background-color: $ljosGrar;
+  border-radius: 10px;
+  box-shadow: 2px 1px $dokkGrar;
+  transition: 0.3s ease-in-out;
+
+  @media (max-width: 440px) {
+    width: 70vw;
+    margin: 0 $gutter/2;
+    font-size: 16px;
+  }
+
+  &--active {
+    background-color: $ljosGraenn;
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: $grar;
+  }
+
+  &--active:hover {
+    background-color: $dokkGraenn;
+  }
+}

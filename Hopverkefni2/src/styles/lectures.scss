@@ -1,0 +1,91 @@
+@import "config";
+
+.lectures {
+  max-width: $max-width;
+
+  &__row {
+    display: flex;
+    margin: 0 (-$gutter/2);
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  &__col {
+    width: 100%;
+    padding: 0 $gutter/2 2*$gutter $gutter/2;
+    color: #000;
+    text-decoration: none;
+  }
+
+  @media (min-width: 700px) {
+    &__col {
+      width: 50%;
+    }
+  }
+  @media (min-width: 1000px) {
+    &__col {
+      width: calc(100% / 3);
+    }
+  }
+}
+
+.lecture {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+
+  &:hover {
+    cursor: pointer;
+
+    .lecture__img {
+      background-color: $grar;
+    }
+
+    .lecture__header {
+      background-color: $grar;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: -2px;
+    background-color: $ljosGrar;
+    transition: 0.3s ease-in-out;
+  }
+
+  &__header {
+    display: flex;
+    font-family: $font-title;
+    flex-direction: row;
+    align-items: flex-end;
+    background-color: $ljosGrar;
+    transition: 0.3s ease-in-out;
+  }
+
+  &__text {
+    width: 100%;
+
+    &__category {
+      padding: $gutter/2 $gutter/2 0 $gutter/2;
+      text-transform: uppercase;
+    }
+
+    &__title {
+      padding: $gutter/2;
+      font-size: 32px;
+      font-weight: 700;
+    }
+  }
+
+  &__checked {
+    visibility: hidden;
+  }
+
+  &__checked--done {
+    padding: $gutter/2;
+    margin: auto 0;
+    font-size: 48px;
+    color: $ljosGraenn;
+  }
+}
